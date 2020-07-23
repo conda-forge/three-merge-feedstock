@@ -1,5 +1,5 @@
 {% set name = "three-merge" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 49640a601eb7c2f6875d1e370028619a0e8be03f017a3bb11b75a6beb146b14c
+  sha256: 60f6afe144595560d63ae32625351bcef3b94733b54eb97800a9feb0f3d9d970
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
